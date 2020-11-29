@@ -1,0 +1,45 @@
+$color-white: #fff;
+$color-black: #000;
+
+$primary-color-dark: #689f38;
+$primary-color: #8bc34a;
+$primary-color-light: #dcedc8;
+$accent-color: #795548;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    width: 60%;
+    min-width: 500px;
+    height: 25vh;
+    min-height: 100px;
+    margin: auto;
+}
