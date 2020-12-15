@@ -30,16 +30,18 @@ html {
     @media only screen and (max-width: $bp-largest) {
         font-size: 50%;
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    width: 60%;
-    min-width: 500px;
-    height: 25vh;
-    min-height: 100px;
-    margin: auto;
+    position: relative;
+    width: 60vw;
+    height: calc(60vw / 2);
+    min-width: 300px;
+    min-height: 150px;
+    background-color: aqua;
 }
