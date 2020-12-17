@@ -53,6 +53,8 @@ main {
     min-height: 150px;
     @media only screen and (max-width: $bp-largest) {
         margin-bottom: 10%;
+        width: 70vw;
+        height: calc(45vw / 2);
     }
     .circle {
         background-color: white;
