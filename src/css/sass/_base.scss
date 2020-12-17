@@ -1,8 +1,8 @@
 $color-white: #fff;
 $color-black: #000;
 
-$primary-color-dark: #689f38;
-$primary-color: #8bc34a;
+$primary-color-dark: #8e2de2;
+$primary-color: #4a00e0;
 $primary-color-light: #dcedc8;
 $accent-color: #795548;
 $primary-text-color: #212121;
@@ -23,7 +23,9 @@ $bp-small: 37.5em; // 600px;
     box-sizing: inherit;
 }
 
-html {
+html,
+body {
+    padding: 0;
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
@@ -34,14 +36,43 @@ html {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    background: #5a349b;
+    background-image: url("../assets/background.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 main {
+    margin-bottom: 3%;
     position: relative;
-    width: 60vw;
-    height: calc(60vw / 2);
+    width: 50vw;
+    height: calc(30vw / 2);
     min-width: 300px;
     min-height: 150px;
-    background-color: aqua;
+    @media only screen and (max-width: $bp-largest) {
+        margin-bottom: 10%;
+    }
+    .circle {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        filter: drop-shadow(-8px 8px 8px rgba(50, 50, 0, 1));
+        border: 4px $primary-color-dark solid;
+        &.circle-1 {
+            width: 65%;
+            height: 140%;
+        }
+        &.circle-2 {
+            top: unset;
+            left: unset;
+            bottom: -25%;
+            right: -5%;
+            width: 65%;
+            height: 140%;
+        }
+    }
 }

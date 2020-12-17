@@ -35,7 +35,11 @@
     top: 4%;
     left: 2%;
     border-radius: 20%;
-    background-color: blue;
+    background-image: linear-gradient(
+        to bottom,
+        $primary-color-dark,
+        $primary-color-light
+    );
     z-index: 5;
     clip-path: polygon(
         0 0,

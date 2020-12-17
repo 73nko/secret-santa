@@ -1,0 +1,50 @@
+@mixin crater($size) {
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: #bbb;
+    box-shadow: inset ($size * -0.1) ($size * 0.05) 0 0 #aaa;
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #ddd;
+    box-shadow: inset 20px -10px 0 0 #b9b9b9;
+
+    .crater1 {
+        @include crater(60px);
+        top: 30px;
+        right: 30px;
+    }
+    .crater2 {
+        @include crater(20px);
+        top: 80px;
+        right: 100px;
+    }
+    .crater3 {
+        @include crater(30px);
+        top: 110px;
+        right: 60px;
+    }
+}
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+
+    .star {
+        position: absolute;
+        background: #f8f4a2;
+        border-radius: 50%;
+    }
+}
