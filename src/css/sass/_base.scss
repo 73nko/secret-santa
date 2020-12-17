@@ -25,10 +25,11 @@ $bp-small: 37.5em; // 600px;
 
 html,
 body {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-
+    position: relative;
     @media only screen and (max-width: $bp-largest) {
         font-size: 50%;
     }
@@ -49,13 +50,23 @@ main {
     position: relative;
     width: 50vw;
     height: calc(30vw / 2);
-    min-width: 300px;
-    min-height: 150px;
+    min-width: 350px;
+    min-height: 200px;
+    max-width: 900px;
+    max-height: 250px;
+    overflow: visible;
     @media only screen and (max-width: $bp-largest) {
         margin-bottom: 10%;
         width: 70vw;
         height: calc(45vw / 2);
     }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 20%;
+        width: 50vw;
+        height: calc(40vw / 2);
+    }
+
     .circle {
         background-color: white;
         border-radius: 50%;
